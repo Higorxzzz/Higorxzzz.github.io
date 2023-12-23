@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Flame</title>
+
+    <!-- Box Icons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="Images/Logo.png">
+
+    <!-- Scroll -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="css/style.css" >
+  </head>
+
+  <body>
+    <!-- header design -->
+    <header class="header">
+      <a href="" class="logo">
+        <h1>
+          <img id="logo" src="Images/Logo.png" alt="Logo.png" width="50px">
+          <span class="logo-Web">Web</span>
+          <span class="logo-Flame">Flame</span>
+        </h1>
+      </a>
+
+      <div class="toggles">
+        <i class='bx bx-toggle-left change-theme' id="theme-button"></i>
+        <i class="bx bx-menu" id="menu-icon"></i>
+      </div>
+
+      <nav class="navbar">
+        <a href="#Inicio" onclick="scrollToInicio('#Inicio')" class="active">Inicio</a>
+        <a href="#Sobre" onclick="scrollToInicio('#Sobre')">Sobre</a>
+        <a href="#Servicos" onclick="scrollToInicio('#Servicos')">Serviços</a>
+        <a href="#Portfolio" onclick="scrollToInicio('#Portfolio')">Portfolio</a>
+        <a href="#Contato" onclick="scrollToInicio('#Contato')">Contato</a>
+      </nav>
+    </header>
+
+    <!-- inicio section design -->
+    <section class="inicio" id="Inicio">
+      <div class="inicio-content">
+        <h3>Olá! Eu sou o</h3>
+        <h1 class="span1" style="font-weight: 400;">Web Flame</h1>
+        <h3>eu sou um <span class="multiple-text span span1"></span></h3>
+        <div class="social-media">
+          <a href="https://api.whatsapp.com/send/?phone=5541995578107&text=Ol%C3%A1!+Quero+fazer+um+or%C3%A7amento.&type=phone_number&app_absent=0" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+          <a href="https://www.instagram.com/agencia_web_flame/" target="_blank"><i class='bx bxl-instagram' ></i></a>
+          <a href="https://github.com/HigorCodeFlame" target="_blank"><i class='bx bxl-github'></i></a>
+          <a href="https://www.linkedin.com/in/higor-caetano-86385626a/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+        </div>
+        <a href="https://bit.ly/Orçamento-WebFlame" class="btn btn1">Orçamento</a>
+      </div>
+
+      <div class="inicio-img">
+        <img src="Images/Inicio.svg" alt="">
+      </div>
+    </section>
+    <!-- sobre section design -->
+    <section class="sobre" id="Sobre">
+      <div class="sobre-img">
+        <img src="Images/Sobre.svg" alt="">
+      </div>
+
+      <div class="sobre-content">
+        <h2 class="heading">Sobre <span class="span span2">mim</span></h2>
+        <h3>Frontend Developer!</h3>
+        <p>Sou um Web Designer apaixonado por criar experiências digitais incríveis. Com habilidades em HTML, CSS, JavaScript, React, Tailwind CSS e claro <span class="span2">Wordpress e Elementor</span>, estou comprometido em transformar conceitos e designs em sites interativos e responsivos. Minha paixão pela programação combinada com um olhar atento para o design me permite criar interfaces atraentes e funcionais.</p>
+        <a href="#" class="btn btn2">Orçamento</a>
+      </div>
+    </section>
+    <!-- servicos section design -->
+    <section class="servicos" id="Servicos">
+      <h2 class="heading">Nossos <span class="span span3">Serviços</span></h2>
+
+      <div class="servicos-container">
+        <div class="servicos-box">
+          <i class='bx bxl-wordpress'></i>
+          <h3>Desenvolvimento de Sites WordPress</h3>
+
+            <p>
+              <span class="span3">Site:</span>
+              <br>
+              De R$800,00 a R$1400,00
+              <br>
+              <br>
+              <span class="span3">Landing Page (Pagina de Venda):</span>
+              <br>
+              De R$300,00 a R$600,00
+            </p>
+
+          <a href="https://bit.ly/Orçamento-WebFlame" class="btn btn3">Orçamento</a>
+        </div>
+
+        <div class="servicos-box">
+          <i class='bx bx-code-alt'></i>
+          <h3>Desenvolvimento de Sites HTML & CSS</h3>
+
+          <p>
+            <span class="span3">Site:</span>
+            <br>
+            De R$1200,00 a R$1800,00
+            <br>
+            <br>
+            <span class="span3">Landing Page (Pagina de Venda):</span>
+            <br>
+            De R$600,00 a R$900,00
+          </p>
+
+          <a href="https://bit.ly/Orçamento-WebFlame" class="btn btn3">Orçamento</a>
+        </div>
+
+        <div class="servicos-box">
+          <i class='bx bx-bar-chart-alt'></i>
+          <h3>Desenvolvimento de Sites E-commerce</h3>
+
+          <p>
+            <span class="span3">Site:</span>
+            <br>
+            De R$300,00 a R$500,00
+            <br>
+            <br>
+            <span class="span3">Landing Page (Pagina de Venda):</span>
+            <br>
+            De R$200,00 a R$300,00
+          </p>
+
+          <a href="https://bit.ly/Orçamento-WebFlame" class="btn btn3">Orçamento</a>
+        </div>
+
+      </div>
+    </section>
+    <!-- portfolio section design -->
+    <section class="portfolio" id="Portfolio">
+      <h2 class="heading"><span class="span span4">Projetos</span> mais recentes</h2>
+      <div onclick="alerta()" class="portfolio-container">
+        <div class="portfolio-box">
+          <img src="Images/portfolio1.jpg" alt="">
+          <div class="portfolio-layer">
+            <h4>Danvo</h4>
+            <p>Landing Page Responsiva!</p>
+            <a href="./Danvo/index.html"><i class="bx bx-link-external"></i></a>
+          </div>
+        </div>
+        <div class="portfolio-box">
+          <img src="Images/portfolio2.jpg" alt="">
+          <div class="portfolio-layer">
+            <h4>Bite Burg</h4>
+            <p>Landing Page Responsiva! Sobre Hamburgueria!</p>
+            <a href="./Hamburguer/index.html"><i class="bx bx-link-external"></i></a>
+          </div>
+        </div>
+
+        <div class="portfolio-box">
+          <img src="Images/portfolio3.jpg" alt="">
+          <div class="portfolio-layer">
+            <h4>Web Design</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <a onclick="alert('Ops, este projeto ainda não está pronto.')" href=""><i class="bx bx-link-external"></i></a>
+          </div>
+        </div>
+        <div class="portfolio-box">
+          <img src="Images/portfolio4.jpg" alt="">
+          <div class="portfolio-layer">
+            <h4>Web Design</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <a onclick="alert('Ops, este projeto ainda não está pronto.')" href=""><i class="bx bx-link-external"></i></a>
+          </div>
+        </div>
+
+        <div class="portfolio-box">
+          <img src="Images/portfolio5.jpg" alt="">
+          <div class="portfolio-layer">
+            <h4>Web Design</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <a onclick="alert('Ops, este projeto ainda não está pronto.')" href=""><i class="bx bx-link-external"></i></a>
+          </div>
+        </div>
+
+        <div class="portfolio-box">
+          <img src="Images/portfolio6.jpg" alt="">
+          <div class="portfolio-layer">
+            <h4>Web Design</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <a onclick="alert('Ops, este projeto ainda não está pronto.')" href=""><i class="bx bx-link-external"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- contato section design -->
+    <section class="contato" id="Contato">
+      <h2 class="heading">contate-<span class="span span5">me!</span></h2>
+
+      <form action="#">
+        <div class="input-box">
+          <input type="text" placeholder="Nome">
+          <input type="email" placeholder="Email">
+        </div>
+        <div class="input-box-2">
+          <input type="text" placeholder="Assunto do email">
+        </div>
+        <textarea name="" id="" cols="30" rows="10" placeholder="Sua mensagem"></textarea>
+        <input type="submit" value="Enviar" class="btn btn4">
+
+      </form>
+    </section>
+
+    <!-- footer design -->
+    <footer class="footer">
+      <div class="footer-text">
+        <p>Copyright &copy; 2024 por WebFlame | Todos os direitos reservados.</p>
+      </div>
+
+      <div class="footer-iconTop">
+        <a onclick="scrollToInicio('#Inicio')"><i class="bx bx-up-arrow-alt"></i></a>
+      </div>
+    </footer>
+
+    <!-- scroll reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- typed js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <!-- custom js -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
