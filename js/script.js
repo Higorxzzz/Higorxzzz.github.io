@@ -91,20 +91,39 @@ themeButton.addEventListener('click', () => {
 const contactForm = document.getElementById('contact-form');
 const contactMessage = document.getElementById('contact-message');
 
+const removeRedBorder = (event) => {
+  // Remove a borda vermelha apenas do campo que está sendo preenchido
+  event.target.style.borderBottom = '';
+};
+
 const sendEmail = (e) => {
   e.preventDefault();
 
+  // Verificar se os campos estão preenchidos
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const assunto = document.getElementById('assunto').value;
+  const text = document.getElementById('text').value;
+
+  if (!name || !email || !assunto || !text) {
+    // Se algum campo estiver vazio, exibir mensagem e adicionar estilo vermelho aos inputs
+    contactMessage.textContent = 'Por favor, preencha todos os campos do formulário.';
+
+    // Adicionar estilo vermelho aos inputs vazios
+    if (!name) document.getElementById('name').style.borderBottom = '4px solid var(--second-main-color)';
+    if (!email) document.getElementById('email').style.borderBottom = '4px solid var(--second-main-color)';
+    if (!assunto) document.getElementById('assunto').style.borderBottom = '4px solid var(--second-main-color)';
+    if (!text) document.getElementById('text').style.borderBottom = '4px solid var(--second-main-color)';
+
+    return;
+  }
+
+  // Se todos os campos estiverem preenchidos, continuar com o envio do e-mail
   emailjs.sendForm('service_5a72ci8', 'template_fvskujf', '#contact-form', 'FUFqKIistmIQV39YA')
     .then(
       (response) => {
         console.log('Resposta da API:', response);
         contactMessage.textContent = 'Mensagem enviada com sucesso! ✅';
-
-        setTimeout(() =>{
-          contactMessage.textContent = ''
-        }, 5000)
-
-        contactForm.reset()
       },
       (error) => {
         console.error('Erro ao enviar e-mail:', error);
@@ -112,5 +131,11 @@ const sendEmail = (e) => {
       }
     );
 };
+
+// Adicionar manipuladores de eventos para remover a borda vermelha ao começar a preencher os campos
+document.getElementById('name').addEventListener('input', removeRedBorder);
+document.getElementById('email').addEventListener('input', removeRedBorder);
+document.getElementById('assunto').addEventListener('input', removeRedBorder);
+document.getElementById('text').addEventListener('input', removeRedBorder);
 
 contactForm.addEventListener('submit', sendEmail);
