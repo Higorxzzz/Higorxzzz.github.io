@@ -22,8 +22,8 @@
 }
 
 .dark-theme{
-    --bg-color: #c4c4c4;
-    --second-bg-color: #dbdbdb;
+    --bg-color: #fff;
+    --second-bg-color: #d7d7d7;
     --text-color: #000000;
 }
 
