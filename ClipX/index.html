@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--========== BOX ICONS ==========-->
+        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="icon" type="image/x-icon" href="Favicon.jpg">
+
+        <!--========== CSS ==========-->
+        <link rel="stylesheet" href="styles.css">
+
+        <title>ClipX</title>
+    </head>
+    <body>
+        <!--========== SCROLL TOP ==========-->
+        <a href="#" class="scrolltop" id="scroll-top">
+            <i class='bx bx-up-arrow-alt scrolltop__icon'></i>
+        </a>
+        
+        <!--========== HEADER ==========-->
+        <header class="l-header" id="header">
+            <nav class="nav bd-container">
+                <div class="logo">
+                    <a href="">Clip<span>X</span></a>
+                </div>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link active-link">Inicio</a></li>
+                        <li class="nav__item"><a href="#share" class="nav__link">Download</a></li>
+
+                        <li><i class='bx bx-toggle-left change-theme' id="theme-button"></i></li>
+                    </ul>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-grid-alt'></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="l-main">
+            <!--========== HOME ==========-->
+            <section class="home" id="home">
+                <div class="home__container bd-container bd-grid">
+                    <div class="home__img">
+                        <img src="vetor-01.svg" alt="vetor-01">
+                    </div>
+
+                    <div class="home__data">
+                        <h1 class="home__title">O melhor app de videos curtos!</h1>
+                        <p class="home__description">Nestas festas de fim de ano, assista e compartilhe os melhores videos.</p>
+                        <a class="button" onclick="downloadAPK()">Baixe Agora!</a>
+                    </div>   
+                </div>
+            </section>
+
+            <!--========== SHARE ==========-->
+            <section class="share section bd-container" id="share">
+                <div class="share__container bd-grid">
+                    <div class="share__data">
+                        <h2 class="section-title-center">Navegue pelo Universo do Entretenimento Sob Demanda</h2>
+                        <p class="share__description">Personalize sua experiência e mergulhe em narrativas envolventes a qualquer momento. </p>
+                        <a class="button" onclick="downloadAPK()">Baixar!</a>
+                    </div>
+
+                    <div class="share__img">
+                        <img src="vetor-02.svg" alt="">
+                    </div>
+                </div>
+            </section>
+
+
+            <!--========== SEND GIFT ==========-->
+            <section class="send section">
+                <div class="send__container bd-container bd-grid">
+                    <div class="send__content">
+                        <h2 class="section-title-center send__title">Navegue pelo Universo do Entretenimento Sob Demanda</h2>
+                        <p class="send__description">Nestas festas de fim de ano, envie um presente para seu ente querido e compartilhe a alegria no Natal.</p>
+                        <form action="">
+                            <div class="send__direction">
+                                <input type="text" placeholder="Email" class="send__input">
+                                <a class="button">Enviar</a>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="send__img">
+                        <img src="vetor-03.svg" alt="">
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!--========== FOOTER ==========-->
+        <footer class="footer section">
+            <div class="footer__container bd-container bd-grid">
+                <div class="footer__content">
+                    <h3 class="footer__title">
+                        <a href="#" class="footer__logo">Presente de Natal</a>
+                    </h3>
+                    <p class="footer__description">Mande um presente e dê
+                        felicidade</p>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Rodapé</h3>
+                    <ul>
+                        <li><a href="#" class="footer__link">Inicio</a></li>
+                        <li><a href="#" class="footer__link">Download</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Social</h3>
+                    <a href="https://www.facebook.com" class="footer__social"><i class='bx bxl-facebook-circle '></i></a>
+                    <a href="https://www.twitter.com" class="footer__social"><i class='bx bxl-twitter'></i></a>
+                    <a href="https://www.instagram.com" class="footer__social"><i class='bx bxl-instagram-alt'></i></a>
+                </div>
+            </div>
+
+            <p class="footer__copy">&#169; 2023 JadeApp. Todos os direitos reservados.</p>
+        </footer>
+
+        <!--========== SCROLL REVEAL ==========-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--========== MAIN JS ==========-->
+        <script src="main.js"></script>
+    </body>
+</html>
