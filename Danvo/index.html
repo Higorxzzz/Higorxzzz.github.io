@@ -74,13 +74,5 @@
     <!-- JavaScript Files -->
     <script src="https://kit.fontawesome.com/a81368914c.js"></script>
     <script src="app.js"></script>
-        <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            if (location.pathname.endsWith(".html") && location.pathname !== "/") {
-                var newURL = location.pathname.slice(0, -5) + location.hash + location.search;
-                window.history.replaceState({}, document.title, newURL);
-            }
-        });
-    </script>
   </body>
 </html>
