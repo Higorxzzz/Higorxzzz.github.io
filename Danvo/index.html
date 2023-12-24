@@ -75,8 +75,8 @@
     <script src="https://kit.fontawesome.com/a81368914c.js"></script>
     <script src="app.js"></script>
         <script>
-        if (location.pathname.slice(-5) !== ".html" && location.pathname !== "/") {
-            var newURL = location.pathname + ".html" + location.hash + location.search;
+        if (location.pathname.slice(-5) === ".html") {
+            var newURL = location.pathname.slice(0, -5) + location.hash + location.search;
             window.history.replaceState({}, document.title, newURL);
         }
     </script>
