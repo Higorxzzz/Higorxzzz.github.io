@@ -146,7 +146,7 @@
           <div class="portfolio-layer">
             <h4>Danvo</h4>
             <p>Landing Page Responsiva!</p>
-            <a href="./Danvo/index.html"><i class="bx bx-link-external"></i></a>
+            <a href="../Danvo/index.html"><i class="bx bx-link-external"></i></a>
           </div>
         </div>
         <div class="portfolio-box">
@@ -154,7 +154,7 @@
           <div class="portfolio-layer">
             <h4>Bite Burg</h4>
             <p>Landing Page Responsiva! Sobre Hamburgueria!</p>
-            <a href="./Hamburguer/index.html"><i class="bx bx-link-external"></i></a>
+            <a href="../Hamburguer/index.html"><i class="bx bx-link-external"></i></a>
           </div>
         </div>
 
@@ -198,17 +198,16 @@
     <section class="contato" id="Contato">
       <h2 class="heading">contate-<span class="span span5">me!</span></h2>
 
-      <form action="#">
+      <form method="post">
         <div class="input-box">
-          <input type="text" placeholder="Nome">
-          <input type="email" placeholder="Email">
+          <input id="name" type="text" placeholder="Nome">
+          <input id="email" type="email" placeholder="Email">
         </div>
         <div class="input-box-2">
-          <input type="text" placeholder="Assunto do email">
+          <input id="assunto" type="text" placeholder="Assunto do email">
         </div>
-        <textarea name="" id="" cols="30" rows="10" placeholder="Sua mensagem"></textarea>
-        <input type="submit" value="Enviar" class="btn btn4">
-
+        <textarea id="text" name="" id="" cols="30" rows="10" placeholder="Sua mensagem"></textarea>
+        <input id="btn" type="submit" value="Enviar" class="btn btn4">
       </form>
     </section>
 
@@ -231,5 +230,31 @@
 
     <!-- custom js -->
     <script src="js/script.js"></script>
+
+    <!-- form contact -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <script>
+    var btn = document.getElementById('btn');
+    btn.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var assunto = document.getElementById('assunto').value;
+    var text = document.getElementById('text').value;
+    var body = 'Nome: ' + name + '<br/> Email: ' + email + '<br/> Assunto: ' + assunto + '<br/> Mensagem: ' + text;
+
+    Email.send({
+        SecureToken: "ea131c1e-b449-4bc2-a4b2-0409dcde5b9f",
+        To: 'higorxzz.oficial@gmail.com',
+        From: "agencia.webflame@gmail.com",
+        Subject: "Mensagem",
+        Body: body
+    }).then(
+        message => alert(message)
+    );
+});
+    </script>
   </body>
 </html>
