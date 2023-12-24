@@ -124,6 +124,12 @@ const sendEmail = (e) => {
       (response) => {
         console.log('Resposta da API:', response);
         contactMessage.textContent = 'Mensagem enviada com sucesso! ✅';
+
+          setTimeout(() =>{
+            contactMessage.textContent = ''
+          }, 5000)
+
+          contactForm.reset()
       },
       (error) => {
         console.error('Erro ao enviar e-mail:', error);
