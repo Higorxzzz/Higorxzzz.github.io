@@ -17,13 +17,13 @@
     --main-color: #BF1111;
     --second-main-color: #FFA500;
     --third-main-color: #651EE3;  
-    --mixed-main-colors: linear-gradient(to right bottom, #BF1111, #FFA500, #651EE3);
+    --mixed-color: linear-gradient(to right bottom, #BF1111, #FFA500, #651EE3);
     --text-color: #fff;
 }
 
 .dark-theme{
-    --bg-color: #fff;
-    --second-bg-color: #d7d7d7;
+    --bg-color: #c4c4c4;
+    --second-bg-color: #dbdbdb;
     --text-color: #000000;
 }
 
@@ -56,7 +56,7 @@ section {
 }
 
 .header.sticky {
-    border-image: var(--mixed-main-colors);
+    border-image: var(--mixed-color);
     border-image-slice: 1;
     border-bottom: 0.3rem solid;
 }
@@ -309,7 +309,7 @@ section {
 
 .portfolio-container {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(2,1fr);
     align-items: center;
     gap: 2.5rem;
 }
@@ -337,7 +337,8 @@ section {
  left: 0;
  width: 100%;
  height: 100%;
- background: linear-gradient(rgba(0, 0, 0, .1), var(--main-color));
+ background: linear-gradient(rgba(0, 0, 0, 0.1), var(--main-color));
+ color: #fff;
  display: flex;
  justify-content: center;
  align-items: center;
@@ -367,13 +368,13 @@ section {
     align-items: center;
     width: 5rem;
     height: 5rem;
-    background: var(--text-color);
+    background: #fff;
     border-radius: 50%;
 }
 
 .portfolio-layer a i {
     font-size:  2rem;
-    color: var(--second-bg-color);
+    color: #101010;
 }
 
 .contato h2 {
@@ -441,7 +442,7 @@ section {
     justify-content: center;
     align-items: center;
     padding: .8rem;
-    background: var(--mixed-main-colors);
+    background: var(--mixed-color);
     border-radius: .8rem;
     transition: .5s ease;
 }
